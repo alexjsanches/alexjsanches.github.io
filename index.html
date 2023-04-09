@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz dia da Mulher!</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rabbit.css">
+</head>
+<body>
+    <div class="card">
+        <div class="circle" style="--clr:#e7097f">
+            <div class="container">
+                <div class="tail"></div>
+                <span class="z-1">Z</span>
+                <span class="z-2">Z</span>
+                <span class="z-3">Z</span>
+                <div class="rabbit-body">
+                  <div class="face-container">
+                    <div class="rabbit-face">
+                      <div class="ear"></div>
+                      <div class="eye-l"></div>
+                      <div class="eye-r"></div>
+                      <div class="mouth"></div>
+                    </div>
+                  </div>
+                  <div class="leaf"></div>
+                  <div class="carrot"></div>
+                  <div class="hand-l"></div>
+                  <div class="hand-r"></div>
+                </div>
+                <div class="shadow"></div>
+              </div>
+        </div>
+        <div class="content">
+            <h2>Para Monaiza,</h2><br>
+            <p>Você é a peça que faltava no meu quebra cabeça. Me sinto completo com você, meu amor. Nesta páscoa, desejo que seu coração seja preenchido com amor, paz e alegria. Você ilumina tudo e todos ao seu redor, e eu sou um cara de sorte por ter você na minha vida. Te amo amor, Feliz Páscoa!</p>
+            <a href="https://www.instagram.com/monaiza_gui/" target="_blank">Clique aqui pra ver a coisa mais linda do mundo</a>
+        </div>
+        <img src="mona.jpg" class="mona">
+    </div>
+    <script>
+        document.addEventListener('mousemove', function(e){
+            let body = document.querySelector('body');
+            let heart = document.createElement('span');
+            let x = e.offsetX;
+            let y = e.offsetY;
+            heart.style.left = x+'px';
+            heart.style.top = y+'px';
+
+            let size = Math.random() * 80;
+            heart.style.width = 20 + size+'px';
+            heart.style.height = 20 + size+'px';
+
+            let transformValue = Math.random() * 360;
+            heart.style.transform = 'rotate('+ transformValue +'deg)'
+
+
+            body.appendChild(heart);
+
+            setTimeout(function(){
+                heart.remove();
+            }, 1000)
+        })
+    </script>
+</body>
+</html>
